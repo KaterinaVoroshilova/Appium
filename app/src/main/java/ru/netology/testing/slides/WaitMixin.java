@@ -1,6 +1,8 @@
-package ru.netology.testing.slides;
+/*package ru.netology.testing.slides;
 
-import android.os.SystemClock;
+//import android.os.SystemClock;
+
+import com.google.firebase.installations.time.SystemClock;
 
 @SuppressWarnings({"FieldMayBeFinal", "unused"})
 class WaitMixin<T> {
@@ -24,4 +26,4 @@ class WaitMixin<T> {
         }
         return result;
     }
-}
+}*/
