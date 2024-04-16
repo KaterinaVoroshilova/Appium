@@ -43,12 +43,13 @@ public class SampleTest {
 
     @Test
     public void EmptyStringTest() {
-        var el1 = driver.findElementById("ru.netology.testing.uiautomator:id/userInput");
-        el1.sendKeys("   ");
-        var el2 = driver.findElementById("ru.netology.testing.uiautomator:id/buttonChange");
-        el2.click();
-        var el3 = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged");
-        Assertions.assertEquals("Hello UiAutomator!", el3.getText());
+        var el1 = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged");
+        String startText = driver.findElementById("ru.netology.testing.uiautomator:id/textToBeChanged").getText();
+        var el2 = driver.findElementById("ru.netology.testing.uiautomator:id/userInput");
+        el2.sendKeys("   ");
+        var el3 = driver.findElementById("ru.netology.testing.uiautomator:id/buttonChange");
+        el3.click();
+        Assertions.assertEquals(startText, el1.getText());
     }
 
     @Test
